@@ -1,25 +1,28 @@
+// Import React and React Router stuff...
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// Import pages
+import Landing from './pages/Landing';
+import CustomerView from './pages/CustomerView';
+import VendorView from './pages/VendorView';
+import NoMatch from './pages/NoMatch';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        {/* <Nav /> */}
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/customer" component={CustomerView} />
+          <Route exact path="/vendor" component={VendorView} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
