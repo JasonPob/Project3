@@ -8,13 +8,14 @@ import Landing from './pages/Landing';
 import CustomerView from './pages/CustomerView';
 import VendorView from './pages/VendorView';
 import NoMatch from './pages/NoMatch';
+import Nav from './components/Nav'
 
 
 function App() {
   return (
     <Router>
       <div>
-        {/* <Nav /> */}
+      <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/customer" component={CustomerView} />
