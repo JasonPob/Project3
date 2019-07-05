@@ -4,9 +4,6 @@ import './style.css';
 
 const VendorList = () => (
     <>
-        <div className='filter-wrapper'>
-            
-        </div>
         <div className='vendor-list col-md-9'>
             <VendorCard />
             <VendorCard />
