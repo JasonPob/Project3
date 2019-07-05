@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.css';
 
-const ZipInputWrapper = () => (
+const ZipInputWrapper = props => {
+    console.log(props);
+    return (
     <div className='zip-input-wrapper'>
             <h3 className='flex-row'>Where do you want to schedule your appointment?</h3>
         <div className='flex-row'>
@@ -11,9 +13,9 @@ const ZipInputWrapper = () => (
             />
         </div>
         <div className='flex-row'>
-            <button>Submit</button>
+            <button onClick={props.HandleDisplayVendors}>Submit</button>
         </div>
     </div>
-)
+)}
 
 export default ZipInputWrapper;
