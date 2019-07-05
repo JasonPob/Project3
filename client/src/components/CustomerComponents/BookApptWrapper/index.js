@@ -1,30 +1,48 @@
 import React from 'react';
+import BookApptBtn from '../BookApptBtn';
+import ZipInputWrapper from '../ZipInputWrapper';
+import VendorWrapper from '../VendorWrapper';
 import './style.css';
 
-// const BookApptWrapper = () => (
-//     <div className='btn-wrapper'>
-//         <button className='book-appt-btn'>Book an Appointment</button>
-//     </div>
-// )
+
 
 class BookApptWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            displayZipInput: false
+            displayZipInput: false,
+            displayVendors: false,
+            displayFilters: false,
         }
     };
 
-    HandleStartBooking = () => {
-        alert('hi');
+    HandleDisplayZip = () => {
+        this.setState({ displayZipInput: true })
+    };
+
+    HandleDisplayVendors = () => {
+        this.setState({ displayVendors: true })
     };
 
     render() {
-        return (
-            <div className='btn-wrapper'>
-                <button className='book-appt-btn' onClick={this.HandleStartBooking}>Book an Appointment</button>
-            </div>
-        )
+        if (this.state.displayZipInput) {
+            return (
+                <>
+                    <ZipInputWrapper
+                        HandleDisplayVendors={this.HandleDisplayVendors}
+                    />
+                    <VendorWrapper
+                        displayVendors={this.state.displayVendors}
+                    />
+                </>
+            )
+        } else {
+            return (
+                <BookApptBtn
+                    HandleDisplayZip={this.HandleDisplayZip}
+                />
+            )
+        }
     }
 }
 
