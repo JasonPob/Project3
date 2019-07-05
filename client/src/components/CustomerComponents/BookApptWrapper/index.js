@@ -1,11 +1,9 @@
 import React from 'react';
+import BookApptBtn from '../BookApptBtn';
+import ZipInputWrapper from '../ZipInputWrapper';
 import './style.css';
 
-// const BookApptWrapper = () => (
-//     <div className='btn-wrapper'>
-//         <button className='book-appt-btn'>Book an Appointment</button>
-//     </div>
-// )
+
 
 class BookApptWrapper extends React.Component {
     constructor(props) {
@@ -15,16 +13,23 @@ class BookApptWrapper extends React.Component {
         }
     };
 
-    HandleStartBooking = () => {
-        alert('hi');
+    HandleDisplayZip = () => {
+        // alert('hi');
+        this.setState({ displayZipInput: true })
     };
 
     render() {
-        return (
-            <div className='btn-wrapper'>
-                <button className='book-appt-btn' onClick={this.HandleStartBooking}>Book an Appointment</button>
-            </div>
-        )
+        if (this.state.displayZipInput) {
+            return (
+                <ZipInputWrapper />
+            )
+        } else {
+            return (
+                <BookApptBtn 
+                    HandleDisplayZip={this.HandleDisplayZip}
+                />
+            )
+        }
     }
 }
 
