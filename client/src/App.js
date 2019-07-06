@@ -1,6 +1,6 @@
 // Import React and React Router stuff...
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // Import pages
