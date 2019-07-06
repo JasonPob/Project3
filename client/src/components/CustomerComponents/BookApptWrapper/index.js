@@ -2,8 +2,7 @@ import React from 'react';
 import BookApptBtn from '../BookApptBtn';
 import ZipInputWrapper from '../ZipInputWrapper';
 import VendorWrapper from '../VendorWrapper';
-import './style.css';
-
+import './style.css'
 
 
 class BookApptWrapper extends React.Component {
@@ -13,6 +12,7 @@ class BookApptWrapper extends React.Component {
             displayZipInput: false,
             displayVendors: false,
             displayFilters: false,
+            showBookingModal: false
         }
     };
 
@@ -24,6 +24,14 @@ class BookApptWrapper extends React.Component {
         this.setState({ displayVendors: true })
     };
 
+    HandleModalOpen = () => {
+        this.setState({ showBookingModal: true })
+    }
+
+    handleModalClose = () => {
+        this.setState({ showBookingModal: false })
+    }
+
     render() {
         if (this.state.displayZipInput) {
             return (
@@ -33,6 +41,9 @@ class BookApptWrapper extends React.Component {
                     />
                     <VendorWrapper
                         displayVendors={this.state.displayVendors}
+                        HandleModalOpen={this.HandleModalOpen}
+                        handleModalClose={this.handleModalClose}
+                        showBookingModal={this.state.showBookingModal}
                     />
                 </>
             )
