@@ -1,0 +1,20 @@
+.client-login-btn {
+    margin-left: 1em;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    border-radius: 3em;
+}
+.stylist-login-btn {
+    margin-right: 1em;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    border-radius: 2em;
+}

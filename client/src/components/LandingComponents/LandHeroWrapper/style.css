@@ -1,0 +1,13 @@
+.Hero-wrapper {
+    border: 2px inset rgb(140, 140, 140);
+    height: 100vh;
+    padding-left: 7vh;
+    padding-right: 7vh;
+    padding-top: 5vh;
+    margin-bottom: 10vh;
+    
+}
+
+.Hero-header-text2 {
+    padding-top: 3vh;
+}
