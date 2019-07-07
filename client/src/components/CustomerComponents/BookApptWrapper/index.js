@@ -13,7 +13,8 @@ class BookApptWrapper extends React.Component {
             displayVendors: false,
             displayFilters: false,
             showBookingModal: false,
-            displayZipMessage: false
+            displayZipMessage: false,
+            zipErrorBorder: false
         }
     };
 
@@ -29,11 +30,12 @@ class BookApptWrapper extends React.Component {
         if (zipResult) {
             this.setState({ displayVendors: true, displayZipMessage: false })
         } else {
-            this.setState({ displayZipMessage: true })
+            this.setState({ displayZipMessage: true, zipErrorBorder: true })
         }
         
     };
 
+    // These methods handle opening and closing of the modal for booking
     HandleModalOpen = () => {
         this.setState({ showBookingModal: true })
     }
@@ -49,6 +51,7 @@ class BookApptWrapper extends React.Component {
                     <ZipInputWrapper
                         HandleDisplayVendors={this.HandleDisplayVendors}
                         displayZipMessage={this.state.displayZipMessage}
+                        zipErrorBorder={this.state.zipErrorBorder}
                     />
                     <VendorWrapper
                         displayVendors={this.state.displayVendors}
