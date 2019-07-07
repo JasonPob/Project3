@@ -6,7 +6,7 @@ import BookingModalWrapper from '../BookingModalWrapper';
 
 
 const VendorWrapper = props => {
-    console.log('vw', props)
+    // console.log('vw', props)
     if (props.displayVendors === true) {
         return (
             <>
@@ -14,7 +14,7 @@ const VendorWrapper = props => {
                     <FilterWrapper />
                     <VendorList
                         HandleModalOpen={props.HandleModalOpen}
-                        />
+                    />
                 </div>
                 <div>
                     <BookingModalWrapper

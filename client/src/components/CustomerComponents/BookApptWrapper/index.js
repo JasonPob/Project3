@@ -12,7 +12,8 @@ class BookApptWrapper extends React.Component {
             displayZipInput: false,
             displayVendors: false,
             displayFilters: false,
-            showBookingModal: false
+            showBookingModal: false,
+            displayZipMessage: false
         }
     };
 
@@ -21,7 +22,16 @@ class BookApptWrapper extends React.Component {
     };
 
     HandleDisplayVendors = () => {
-        this.setState({ displayVendors: true })
+        // This block below varifies that the input is 6 digits long. If not, it displays a message to user.
+        const userZip = document.getElementById('zip-input').value;
+        const zipREGEX = /^\d{5}$/;
+        const zipResult = zipREGEX.test(userZip);
+        if (zipResult) {
+            this.setState({ displayVendors: true, displayZipMessage: false })
+        } else {
+            this.setState({ displayZipMessage: true })
+        }
+        
     };
 
     HandleModalOpen = () => {
@@ -38,6 +48,7 @@ class BookApptWrapper extends React.Component {
                 <>
                     <ZipInputWrapper
                         HandleDisplayVendors={this.HandleDisplayVendors}
+                        displayZipMessage={this.state.displayZipMessage}
                     />
                     <VendorWrapper
                         displayVendors={this.state.displayVendors}
