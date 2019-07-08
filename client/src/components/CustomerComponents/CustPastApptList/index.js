@@ -1,10 +1,13 @@
 import React from 'react';
 import CustAppointment from '../CustAppointment';
-import './style.css';
 
-const CustAppointmentList = () => (
+const CustPastApptList = () => (
     <>
         <div className='cust-appointment-list'>
+            <CustAppointment />
+            <CustAppointment />
+            <CustAppointment />
+            <CustAppointment />
             <CustAppointment />
             <CustAppointment />
             <CustAppointment />
@@ -12,4 +15,4 @@ const CustAppointmentList = () => (
     </>
 );
 
-export default CustAppointmentList;
+export default CustPastApptList;
