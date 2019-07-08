@@ -8,9 +8,11 @@ const BookingModalWrapper = props => {
     return (
         <div className={showHideClassName}>
             <section className="modal-main">
-                <h1>Book your Appointment!</h1>
+                <div className='d-flex justify-content-end'>
+                    <button onClick={props.handleModalClose}>X</button>
+                </div>
+                <h1 className='text-center'>Book your Appointment!</h1>
                 <AvailabilitiesWrapper />
-                <button onClick={props.handleModalClose}>close</button>
             </section>
         </div>)
 }

@@ -1,3 +1,4 @@
+/* Full screen, positions modal window */
 .booking-modal {
     position: fixed;
     top: 0;
@@ -7,14 +8,17 @@
     background: rgba(0, 0, 0, 0.6);
 }
 
+/* This is actually the outlined modal */
 .modal-main {
     position:fixed;
     background: white;
-    width: 80%;
+    width: 60%;
+    min-width: 370px;
     height: auto;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.6);
   }
 
 .modal-display-block {

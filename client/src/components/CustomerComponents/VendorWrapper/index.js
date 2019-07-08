@@ -10,7 +10,7 @@ const VendorWrapper = props => {
     if (props.displayVendors === true) {
         return (
             <>
-                <div className='vendor-wrapper container d-flex'>
+                <div className='vendor-wrapper container d-flex flex-wrap'>
                     <FilterWrapper />
                     <VendorList
                         HandleModalOpen={props.HandleModalOpen}
