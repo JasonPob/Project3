@@ -14,9 +14,29 @@ class BookApptWrapper extends React.Component {
             displayFilters: false,
             showBookingModal: false,
             displayZipMessage: false,
-            zipErrorBorder: false
+            zipErrorBorder: false,
+            // Weekday checkboxes
+            sundayIsChecked: true,
+            mondayIsChecked: true,
+            tuesdayIsChecked: true,
+            wednesdayIsChecked: true,
+            thursdayIsChecked: true,
+            fridayIsChecked: true,
+            saturdayIsChecked: true
         }
     };
+
+    // sets state every time the filter boxes change.
+    handleFilterChange = event => {
+        const target = event.target;
+        const value = target.checked ? true : false;
+        const name = target.name;
+        alert(name);
+        alert(value);
+        this.setState({
+            [name]: value
+        });
+    }
 
     HandleDisplayZip = () => {
         this.setState({ displayZipInput: true })
@@ -32,7 +52,7 @@ class BookApptWrapper extends React.Component {
         } else {
             this.setState({ displayZipMessage: true, zipErrorBorder: true })
         }
-        
+
     };
 
     // These methods handle opening and closing of the modal for booking
@@ -58,6 +78,14 @@ class BookApptWrapper extends React.Component {
                         HandleModalOpen={this.HandleModalOpen}
                         handleModalClose={this.handleModalClose}
                         showBookingModal={this.state.showBookingModal}
+                        sundayIsChecked={this.state.sundayIsChecked}
+                        mondayIsChecked={this.state.mondayIsChecked}
+                        tuesdayIsChecked={this.state.tuesdayIsChecked}
+                        wednesdayIsChecked={this.state.wednesdayIsChecked}
+                        thursdayIsChecked={this.state.thursdayIsChecked}
+                        fridayIsChecked={this.state.fridayIsChecked}
+                        saturdayIsChecked={this.state.saturdayIsChecked}
+                        handleFilterChange={this.handleFilterChange}
                     />
                 </>
             )

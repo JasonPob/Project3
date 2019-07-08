@@ -4,6 +4,10 @@
     min-width: 190px;
 }
 
+.vendor-card:hover {
+    transform: scale(1.02);
+}
+
 .book-vendor-btn {
     margin: 10px;
     text-align: center;

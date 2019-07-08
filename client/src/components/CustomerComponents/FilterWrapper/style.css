@@ -3,3 +3,6 @@
     text-align: center;
 }
 
+label:hover {
+    transform: scale(1.05);
+}
