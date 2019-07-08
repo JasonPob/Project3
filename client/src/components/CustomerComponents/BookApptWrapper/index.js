@@ -28,7 +28,7 @@ class BookApptWrapper extends React.Component {
         const zipREGEX = /^\d{5}$/;
         const zipResult = zipREGEX.test(userZip);
         if (zipResult) {
-            this.setState({ displayVendors: true, displayZipMessage: false })
+            this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false })
         } else {
             this.setState({ displayZipMessage: true, zipErrorBorder: true })
         }
