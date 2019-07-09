@@ -34,7 +34,7 @@ const InputStylistWrapper = props => {
 
                     <div className="form-group">
                         <label for="exampleFormControlFile1">Example file input</label>
-                        <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+                        <input type="file" className="form-control-file bg-success" id="exampleFormControlFile1" />
                     </div>
                     <button className="btn btn-primary" onClick={props.HandleDisplayClient}>Submit</button>
                 </form>
