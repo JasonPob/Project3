@@ -23,12 +23,12 @@ class CustAppointmentsWrapper extends React.Component {
         if (this.state.upcomingApptsView) {
             return (
                 <>
-                    <div className='cust-appointments-wrapper'>
-                        <CustApptToggle
-                            upcomingApptsView={this.state.upcomingApptsView}
-                            handleToggleView={this.handleToggleView}>
-                            Past Appointments
-                        </CustApptToggle>
+                    <div className='cust-appointments-wrapper p-3'>
+                        <div className='d-flex justify-content-end'>
+                            <CustApptToggle
+                                upcomingApptsView={this.state.upcomingApptsView}
+                                handleToggleView={this.handleToggleView} />
+                        </div>
                         <h3 className='cust-appointments-header-text'>Your Upcoming Appointments</h3>
                         <CustAppointmentList />
                     </div>
@@ -37,12 +37,12 @@ class CustAppointmentsWrapper extends React.Component {
         } else {
             return (
                 <>
-                    <div className='cust-appointments-wrapper'>
-                        <CustApptToggle
-                            upcomingApptsView={this.state.upcomingApptsView}
-                            handleToggleView={this.handleToggleView}>
-                            Upcoming Appointments
-                        </CustApptToggle>
+                    <div className='cust-appointments-wrapper p-3'>
+                        <div className='d-flex justify-content-end'>
+                            <CustApptToggle
+                                upcomingApptsView={this.state.upcomingApptsView}
+                                handleToggleView={this.handleToggleView} />
+                        </div>
                         <h3 className='cust-appointments-header-text'>Your Past Appointments</h3>
                         <CustPastApptList />
                     </div>
