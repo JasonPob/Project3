@@ -1,0 +1,15 @@
+#carouselExampleSlidesOnly {
+    height: 100%;
+    background-color: blue;
+
+}
+
+#carTitle {
+    font-family: 'Ultra', serif;
+    font-size: xx-large;
+}
+
+#carSubText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}

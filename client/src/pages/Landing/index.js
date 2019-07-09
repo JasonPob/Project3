@@ -3,7 +3,7 @@ import LandHeroWrapper from '../../components/LandingComponents/LandHeroWrapper'
 
 const Landing = () => 
 <>
-        <h1>Landing Page</h1>
+        {/* <h1>Landing Page</h1> */}
         <LandHeroWrapper />
         <LoggerWrapper />
     </>
