@@ -12,14 +12,9 @@ const VendorWrapper = props => {
             <>
                 <div className='vendor-wrapper container d-flex flex-wrap'>
                     <FilterWrapper 
-                        sundayIsChecked={props.sundayIsChecked}
-                        mondayIsChecked={props.mondayIsChecked}
-                        tuesdayIsChecked={props.tuesdayIsChecked}
-                        wednesdayIsChecked={props.wednesdayIsChecked}
-                        thursdayIsChecked={props.thursdayIsChecked}
-                        fridayIsChecked={props.fridayIsChecked}
-                        saturdayIsChecked={props.saturdayIsChecked}
-                        handleFilterChange={props.handleFilterChange}
+                            apptDay={props.apptDay}
+                            handleFilterChange={props.handleFilterChange}
+
                     />
                     <VendorList
                         HandleModalOpen={props.HandleModalOpen}
