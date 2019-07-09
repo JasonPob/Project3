@@ -31,6 +31,14 @@ const VendorList = props => {
                 HandleModalOpen={props.HandleModalOpen}
                 handleModalClose={props.handleModalClose}
             />
+            <VendorCard 
+                HandleModalOpen={props.HandleModalOpen}
+                handleModalClose={props.handleModalClose}
+            />
+            <VendorCard 
+                HandleModalOpen={props.HandleModalOpen}
+                handleModalClose={props.handleModalClose}
+            />
            
         </div>
     </>
