@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 const VendorCard = props => {
-    console.log('vc', props);
+    // console.log('vc', props);
     return (
         <div className='vendor-card col-md-3'>
             <p><strong>Name:</strong> John Smith</p>
