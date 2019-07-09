@@ -18,6 +18,14 @@ module.exports = function (app) {
         });
     });
 
+    app.post('/login',
+        passport.authenticate('local', {
+            successRedirect: '/',
+            failureRedirect: '/login',
+            failureFlash: true
+        })
+    );
+
     // Delete an example by id
     app.delete("/api/examples/:id", function (req, res) {
         db.Example.destroy({ where: { id: req.params.id } }).then(function (
