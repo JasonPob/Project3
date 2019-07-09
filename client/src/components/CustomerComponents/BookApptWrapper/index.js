@@ -3,6 +3,7 @@ import BookApptBtn from '../BookApptBtn';
 import ZipInputWrapper from '../ZipInputWrapper';
 import VendorWrapper from '../VendorWrapper';
 import './style.css';
+// import smooth scroll package
 import * as Scroll from 'react-scroll';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
@@ -18,25 +19,15 @@ class BookApptWrapper extends React.Component {
             displayZipMessage: false,
             zipErrorBorder: false,
             // Weekday checkboxes
-            sundayIsChecked: true,
-            mondayIsChecked: true,
-            tuesdayIsChecked: true,
-            wednesdayIsChecked: true,
-            thursdayIsChecked: true,
-            fridayIsChecked: true,
-            saturdayIsChecked: true
+            apptDay: ''
         }
     };
 
     // sets state every time the filter boxes change.
     handleFilterChange = event => {
-        const target = event.target;
-        const value = target.checked ? true : false;
-        const name = target.name;
-        alert(name);
-        alert(value);
+        alert(event.target.value);
         this.setState({
-            [name]: value
+            apptDay: event.target.value
         });
     }
 
@@ -51,6 +42,7 @@ class BookApptWrapper extends React.Component {
         const zipREGEX = /^\d{5}$/;
         // test method returns true or false
         const zipResult = zipREGEX.test(userZip);
+        // Scroll down to vendor wrapper
         scroll.scrollTo(580);
         if (zipResult) {
             this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false })
@@ -78,19 +70,14 @@ class BookApptWrapper extends React.Component {
                         displayZipMessage={this.state.displayZipMessage}
                         zipErrorBorder={this.state.zipErrorBorder}
                     />
+                    {/* Element is part of the smooth scroll npm package */}
                     <Element name='vendor-wrapper'>
                         <VendorWrapper
                             displayVendors={this.state.displayVendors}
                             HandleModalOpen={this.HandleModalOpen}
                             handleModalClose={this.handleModalClose}
                             showBookingModal={this.state.showBookingModal}
-                            sundayIsChecked={this.state.sundayIsChecked}
-                            mondayIsChecked={this.state.mondayIsChecked}
-                            tuesdayIsChecked={this.state.tuesdayIsChecked}
-                            wednesdayIsChecked={this.state.wednesdayIsChecked}
-                            thursdayIsChecked={this.state.thursdayIsChecked}
-                            fridayIsChecked={this.state.fridayIsChecked}
-                            saturdayIsChecked={this.state.saturdayIsChecked}
+                            apptDay={this.state.apptDay}
                             handleFilterChange={this.handleFilterChange}
                         />
                     </Element>
