@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `barbershop`.`users` (
   `firstName` VARCHAR(255) NOT NULL,
   `lastName` VARCHAR(255) NOT NULL,
   `userTypeID` INT NOT NULL COMMENT 'user table contains all user types ie. barber or client.',
+  `password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`userID`),
   UNIQUE INDEX `userID_UNIQUE` (`userID` ASC) VISIBLE,
   UNIQUE INDEX `userName_UNIQUE` (`userName` ASC) VISIBLE)
