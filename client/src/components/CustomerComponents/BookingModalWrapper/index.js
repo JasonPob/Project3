@@ -1,5 +1,5 @@
 import React from 'react';
-import AvailabilitiesWrapper from '../AvailabilitiesWrapper';
+import AvailabilitiesForm from '../AvailabilitiesForm';
 import './style.css';
 
 const BookingModalWrapper = props => {
@@ -12,7 +12,7 @@ const BookingModalWrapper = props => {
                     <button onClick={props.handleModalClose}>X</button>
                 </div>
                 <h1 className='text-center'>Book your Appointment!</h1>
-                <AvailabilitiesWrapper />
+                <AvailabilitiesForm />
             </section>
         </div>)
 }
