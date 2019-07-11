@@ -8,13 +8,16 @@ function Nav() {
         OmniCut
       </a>
       <div className="collapse navbar-collapse" id  ="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
+        
+        <ul  className="navbar-nav mr-auto float-right">
+
           <li className="nav-item active brandPageNames">
             <a className="nav-link text-primary" href="/Vendor">
               Vendor <span className="sr-only">(current)</span>
             </a>
           </li>
-          <li className="nav-item active brandPageNames">
+
+          <li className="nav-item active brandPageNames float-right">
             <a className="nav-link text-primary" href="/Customer">
               Customer <span className="sr-only">(current)</span>
             </a>

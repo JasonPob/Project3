@@ -1,7 +1,10 @@
 #carouselExampleSlidesOnly {
     height: 100%;
-    background-color: blue;
+    /* background-color: blue; */
 
+}
+.carousel-caption {
+    padding-bottom: 5%;
 }
 
 #carTitle {
@@ -12,4 +15,6 @@
 #carSubText {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+    font-size: medium;
+    /* margin-bottom: 42vh; */
 }
