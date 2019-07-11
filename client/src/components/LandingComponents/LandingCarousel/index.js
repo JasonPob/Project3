@@ -4,7 +4,9 @@ import './style.css';
 const LandingCarousel = props => {
     console.log(props);
     return (
-        <div id="carouselExampleSlidesOnly" className="carousel slide" >
+        <>
+
+        <div id="carouselExampleFade" className="carousel slide carousel-fade"  data-ride="carousel">
             <div className="carousel-inner">
                 
                 <div className="carousel-item active">
@@ -22,15 +24,34 @@ const LandingCarousel = props => {
                     </div>
                 </div>
                 <div className="carousel-item ">
-                    <img className="d-block w-100" src='/images/Barber-05.jpg' src1={props.SliderImage3} alt="Third slide" />
+                    <img className="d-block w-100" src='/images/Barber-09.jpg' src1={props.SliderImage3} alt="Third slide" />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5 id='carTitle' className='mb-3'>Sharpen Your Skill</h5>
+                        <h5 id='carTitle' className='mb-3'>Sharpen Your Skills</h5>
                         <p id='carSubText' className='mb-5'>Are you a stylist wanting to create you own schedule. Book your clientele. Build your portfolio.</p>
                     </div>
                 </div>
             </div>
+            <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
+  </a>
         </div>
+        </>
     )
 }
 
 export default LandingCarousel;
+
+
+
+ 
+
+// var React = require('react');
+// var ReactDOM = require('react-dom');
+// var Carousel = require('react-responsive-carousel').Carousel;
+
+// var LandingCarousel = React.createClass({

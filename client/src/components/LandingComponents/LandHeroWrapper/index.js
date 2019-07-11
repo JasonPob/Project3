@@ -1,24 +1,27 @@
 import React from 'react';
 import './style.css';
 import LandingCarousel from '../LandingCarousel';
+// import ControlledCarousel from '.';
 
 class LandHeroWrapper extends React.Component {
     render() {
         return (
             <>
-            <LandingCarousel />
-            
-                <div className='Hero-wrapper'>
-                    <h3 className='Hero-header-text'>Are you a Hair Stylist?</h3>
+            {/* <ControlledCarousel /> */}
+                <LandingCarousel />
 
-                    <p className='Hero-body-text'>Nullam maximus nunc ut felis mollis, eu euismod diam pellentesque. Vivamus sed arcu nec eros venenatis tempus. Duis mollis sagittis tincidunt. Vestibulum pulvinar lobortis scelerisque. Cras velit nunc, pulvinar eget quam a, suscipit pretium diam.</p>
+                <div className='Hero-wrapper mt-2'>
+                    <h4 className='Hero-header-text text-white'>Are you a Barber?</h4>
+                    <p className='Hero-body-text text-white'>Start using OmniCut services as a vendor  in three easy steps. <br/> <strong> (1) </strong>Join <strong> (2) </strong> Style and <strong> (3) </strong> Review
+                    </p>
 
-                    <h3 className='Hero-header-text2'>Looking for  a Hair Stylist?</h3>
-                    <ul className='Hero-pros-text'>
-                        <li><strong>Join:</strong> Nullam scelerisque tempus</li>
-                        <li><strong>Search:</strong> Libero vitae ultricies.</li>
-                        <li><strong>Book:</strong> In at efficitur urna.</li>
-                    </ul>
+                    {/* <p className='Hero-body-text text-white'>Nullam maximus nunc ut felis mollis, eu euismod diam pellentesque. Vivamus sed arcu nec eros venenatis tempus. Duis mollis sagittis tincidunt. Vestibulum pulvinar lobortis scelerisque. Cras velit nunc, pulvinar eget quam a, suscipit pretium diam.</p> */}
+                </div>
+
+                <div className='Hero-wrapper2 mt-2'>
+                    <h4 className='Hero-header-text2 text-white'>In need of a Barber?</h4>
+                    <p className='Hero-body-text text-white'>Start using OmniCut services as a client in three easy steps. <br/> <strong> (1) </strong>Join <strong> (2) </strong> Search and <strong> (3) </strong> Book
+                    </p>
                 </div>
             </>
         )
