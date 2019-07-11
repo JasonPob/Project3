@@ -1,5 +1,6 @@
 USE `barbershop` ;
  
+
 INSERT INTO barber (userName, firstName, lastName, bPassword) 
 VALUES ('garyWestbury', 'Gary', 'Westbury','password');
 INSERT INTO barber (userName, firstName, lastName, bPassword ) 
@@ -11,6 +12,7 @@ VALUES ('johnPob', 'John', 'Poblador', 'password');
 INSERT INTO clients (userName, firstName, lastName, cPassword) 
 VALUES ('jonasPob', 'Jonas', 'Poblador','password');
 SELECT * FROM clients;
+
 
 SELECT * FROM barber;
 SELECT * FROM `barbershop`.`client`;
