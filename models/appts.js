@@ -1,12 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-    var Appointments = sequelize.define("Appointments", {
-      appointmentID: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          autoIncrement: true,
-          primaryKey: true,
-          unique: true
-      },
+    var Appointment = sequelize.define("Appointment", {
+    
       barberID: {
           type: DataTypes.INTEGER,
           allowNull: false
@@ -41,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
-    return Appointments;
+    return Appointment;
 };
 
 
