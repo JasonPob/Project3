@@ -67,7 +67,9 @@ class AvailabilitiesForm extends React.Component {
                     <div className='d-flex justify-content-center'>
                         <textarea placeholder='Enter message' className='vendor-message-input'></textarea>
                     </div>
-                    <button type="submit">Book</button>
+                    <div className='d-flex justify-content-center mt-4'>
+                        <button type="submit">Book</button>
+                    </div>
                 </div>
             </form>
         )
