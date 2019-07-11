@@ -10,7 +10,7 @@ class AvailabilitiesForm extends React.Component {
         }
     }
 
-    handleSubmit = () => {
+    handleBookAppt = () => {
         alert('SUBMITTED!');
     }
 
@@ -18,13 +18,14 @@ class AvailabilitiesForm extends React.Component {
         this.setState({ timeSlot: event.target.value })
     }
 
+
     render(props) {
         console.log(this.state.timeSlot)
         // I guess this will contain the available times logic when we know what the data will look like...
         let availableTimes = [];
 
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleBookAppt}>
                 <div className='availabilities-wrapper p-3'>
                     <h3>Availabilities:</h3>
                     <hr />
