@@ -1,6 +1,7 @@
 .filter-wrapper {
     border: 2px solid green;
     text-align: center;
+    height: 380px;
 }
 
 label:hover {
