@@ -43,7 +43,7 @@ class BookApptWrapper extends React.Component {
         // test method returns true or false
         const zipResult = zipREGEX.test(userZip);
         // Scroll down to vendor wrapper
-        scroll.scrollTo(580);
+        scroll.scrollTo(530);
         if (zipResult) {
             this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false })
         } else {
