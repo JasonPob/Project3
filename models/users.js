@@ -30,7 +30,17 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
+//     var Barber = sequelize.define(`barber`, {
+
+//     });
+
+// USE `barbershop`;
+// CREATE  OR REPLACE VIEW `barber` AS
+// SELECT u.userID AS barberID, u.userName, u.firstName, u.lastName, ut.userType
+// FROM users u, userType ut 
+// WHERE u.userTypeID = ut.userTypeID
+// AND ut.userType = 'barber';
     return Users;
-};
+ };
 
         
