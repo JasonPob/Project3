@@ -13,6 +13,8 @@ class VendorWrapper extends React.Component {
         const dayOfWeek = date.getDay()
         console.log('date:', date);
         console.log('day of week:', dayOfWeek);
+
+        
     }
 
     render() {
