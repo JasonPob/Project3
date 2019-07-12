@@ -62,7 +62,7 @@ const SignUpForm = props => {
 
                         <button className="btn btn-primary" onClick={props.HandleLoginSubmit}>Submit</button>
                     </form>
-                    <h5 className='mt-3 acctQuestion'>Already have an account? <a href='../SingUp'>Sign In!</a></h5>
+                    <h5 className='mt-3 acctQuestion'>Already have an account? <a href='/LogIn'>Sign In!</a></h5>
                 </div>
             </div>
         </>
