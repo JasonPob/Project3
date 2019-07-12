@@ -3,6 +3,9 @@ import VendorList from '../VendorList';
 import FilterWrapper from '../FilterWrapper';
 import './style.css';
 import BookingModalWrapper from '../BookingModalWrapper';
+// Routes
+import API from '../../utils/API';
+
 
 
 class VendorWrapper extends React.Component {
@@ -14,6 +17,19 @@ class VendorWrapper extends React.Component {
         console.log('date:', date);
         console.log('day of week:', dayOfWeek);
     }
+
+    componentDidMount() {
+        this.loadBarbers();
+    }
+    
+    loadBarbers = () => {
+        API.getBarbers()
+            .then(res => {
+                console.log('res', res);
+                // this.setState({ books: res.data })
+            })
+            .catch(err => console.log(err));
+    };
 
     render() {
         if (this.props.displayVendors === true) {
