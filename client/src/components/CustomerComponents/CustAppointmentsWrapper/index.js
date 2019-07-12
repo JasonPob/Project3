@@ -24,12 +24,15 @@ class CustAppointmentsWrapper extends React.Component {
             return (
                 <>
                     <div className='cust-appointments-wrapper p-3'>
-                        <div className='d-flex justify-content-end'>
-                            <CustApptToggle
-                                upcomingApptsView={this.state.upcomingApptsView}
-                                handleToggleView={this.handleToggleView} />
+                        <div className='d-flex justify-content-between'>
+                            <h3 className='cust-appointments-header-text brandLogo mt-3'>Your Upcoming Appointments</h3>
+                            <div className='d-flex justify-content-end'>
+                                <CustApptToggle
+                                    upcomingApptsView={this.state.upcomingApptsView}
+                                    handleToggleView={this.handleToggleView} />
+                            </div>
                         </div>
-                        <h3 className='cust-appointments-header-text'>Your Upcoming Appointments</h3>
+                        <hr />
                         <CustAppointmentList />
                     </div>
                 </>
@@ -38,12 +41,15 @@ class CustAppointmentsWrapper extends React.Component {
             return (
                 <>
                     <div className='cust-appointments-wrapper p-3'>
-                        <div className='d-flex justify-content-end'>
-                            <CustApptToggle
-                                upcomingApptsView={this.state.upcomingApptsView}
-                                handleToggleView={this.handleToggleView} />
+                        <div className='d-flex justify-content-between'>
+                            <h3 className='cust-appointments-header-text brandLogo mt-3'>Your Past Appointments</h3>
+                            <div className='d-flex justify-content-end'>
+                                <CustApptToggle
+                                    upcomingApptsView={this.state.upcomingApptsView}
+                                    handleToggleView={this.handleToggleView} />
+                            </div>
                         </div>
-                        <h3 className='cust-appointments-header-text'>Your Past Appointments</h3>
+                        <hr />
                         <CustPastApptList />
                     </div>
                 </>

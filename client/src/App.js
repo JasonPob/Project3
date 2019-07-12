@@ -9,6 +9,8 @@ import CustomerView from './pages/CustomerView';
 import VendorView from './pages/VendorView';
 import NoMatch from './pages/NoMatch';
 import Nav from './components/Nav'
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/customer" component={CustomerView} />
           <Route exact path="/vendor" component={VendorView} />
+          <Route exact path="/login" component={LogIn} />
+          <Route exact path="/signup" component={SignUp} />
           <Route component={NoMatch} />
         </Switch>
       {/* <Footer />   */}

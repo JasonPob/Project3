@@ -1,10 +1,22 @@
 import React from 'react';
-import VendorCalendar from 
+import VendorCard from '../../components/CustomerComponents/VendorCard'
+import VendorAppointmentList from '../../components/VendorComponents/VendorAppointmentList'
+import VendorCalendar from '../../components/VendorComponents/VendorCalendar'
 
 
-const VendorView = () => 
-<>
-<h1>VendorView</h1>
+const VendorView = () =>
+    
+            <>
+        <h1>Vendor View</h1>
+        <VendorCalendar />
+        <VendorCard />
+        <VendorAppointmentList />
+    </>
+        
+    
 
-</>
+    
+
 export default VendorView;
+
+
