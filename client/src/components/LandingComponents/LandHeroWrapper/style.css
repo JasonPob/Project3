@@ -21,7 +21,6 @@ light: #dedbd0
 .Hero-body-text {
     font-family: 'Open Sans', sans-serif;
     font-size: small;
-    margin-bottom: 7vh;
 }
 .Hero-header-text {
     font-family: 'Open Sans', sans-serif;
@@ -43,5 +42,13 @@ light: #dedbd0
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 7vh;
+
+}
+
+.btnText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: small;
 
 }
