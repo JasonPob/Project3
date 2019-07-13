@@ -12,8 +12,8 @@ const FilterWrapper = props => {
             <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='all'
-                            checked={props.apptDay === 'all'}
+                            value='8'
+                            checked={props.apptDay === '8'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         All Availabilities
@@ -22,8 +22,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='sunday'
-                            checked={props.apptDay === 'sunday'}
+                            value='1'
+                            checked={props.apptDay === '1'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Sunday
@@ -32,8 +32,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='monday'
-                            checked={props.apptDay === 'monday'}
+                            value='2'
+                            checked={props.apptDay === '2'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Monday
@@ -42,8 +42,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='tuesday'
-                            checked={props.apptDay === 'tuesday'}
+                            value='3'
+                            checked={props.apptDay === '3'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Tuesday
@@ -52,8 +52,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='wednesday'
-                            checked={props.apptDay === 'wednesday'}
+                            value='4'
+                            checked={props.apptDay === '4'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Wednesday
@@ -62,8 +62,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='thursday'
-                            checked={props.apptDay === 'thursday'}
+                            value='5'
+                            checked={props.apptDay === '5'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Thursday
@@ -72,8 +72,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='friday'
-                            checked={props.apptDay === 'friday'}
+                            value='6'
+                            checked={props.apptDay === '6'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Friday
@@ -82,8 +82,8 @@ const FilterWrapper = props => {
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
-                            value='saturday'
-                            checked={props.apptDay === 'saturday'}
+                            value='7'
+                            checked={props.apptDay === '7'}
                             onChange={props.handleFilterChange}
                             className='m-2' />
                         Saturday

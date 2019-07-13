@@ -11,22 +11,21 @@ import API from '../../utils/API';
 class VendorWrapper extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            barbers: []
+        }
 
         const date = new Date();
         const dayOfWeek = date.getDay()
         console.log('date:', date);
         console.log('day of week:', dayOfWeek);
     }
-
-    componentDidMount() {
-        this.loadBarbers();
-    }
     
     loadBarbers = () => {
         API.getBarbers()
             .then(res => {
                 console.log('res', res);
-                // this.setState({ books: res.data })
+                // this.setState({ barbers: res.data })
             })
             .catch(err => console.log(err));
     };
@@ -43,6 +42,7 @@ class VendorWrapper extends React.Component {
                         />
                         <VendorList
                             HandleModalOpen={this.props.HandleModalOpen}
+                            loadBarbers={this.loadBarbers}
                         />
                     </div>
                     <div>
