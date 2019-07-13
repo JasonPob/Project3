@@ -4,7 +4,7 @@ const barbersController = require('../controllers/barbersController');
 
 // Matches with "/api/books"
 router.route("/")
-  .get(booksController.findAll);
+  .get(barbersController.findAllBarbers);
 
 
 module.exports = router;

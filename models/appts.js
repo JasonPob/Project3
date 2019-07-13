@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }, 
         clientID: {
-            tpye: DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         dateOfAppointment: {
