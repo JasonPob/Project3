@@ -1,5 +1,6 @@
 USE `barbershop` ;
  
+<<<<<<< HEAD
 INSERT INTO barber (userName, firstName, lastName) 
 VALUES ('garyWestbury', 'Gary', 'Westbury');
 INSERT INTO users (userName, firstName, lastName) 
@@ -11,6 +12,21 @@ VALUES ('johnPob', 'John', 'Poblador');
 INSERT INTO users (userName, firstName, lastName, userTypeID) 
 VALUES ('jonasPob', 'Jonas', 'Poblador');
 SELECT * FROM users;
+=======
+
+INSERT INTO barber (userName, firstName, lastName, bPassword) 
+VALUES ('garyWestbury', 'Gary', 'Westbury','password');
+INSERT INTO barber (userName, firstName, lastName, bPassword ) 
+VALUES ('dannyWestbury', 'Danny', 'Westbury', 'password');
+ SELECT * FROM barber;
+ 
+INSERT INTO clients (userName, firstName, lastName, cPassword) 
+VALUES ('johnPob', 'John', 'Poblador', 'password');
+INSERT INTO clients (userName, firstName, lastName, cPassword) 
+VALUES ('jonasPob', 'Jonas', 'Poblador','password');
+SELECT * FROM clients;
+
+>>>>>>> 61b425928422329f70f92278babed26736dbf706
 
 SELECT * FROM barber;
 SELECT * FROM `barbershop`.`client`;

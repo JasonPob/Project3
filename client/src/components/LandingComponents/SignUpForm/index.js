@@ -13,7 +13,7 @@ const SignUpForm = props => {
                     <form className='InnerForm'>
                         <div className="form-group">
                             <label for="InputName">Name</label>
-                            <input name='name' type="name" className="form-control" id="username" placeholder="Jane Doe" />
+                            <input name='name' type="name" className="form-control" id="InputName" placeholder="Jane Doe" />
                         </div>
                         <div className="form-group">
                             <label for="exampleInputEmail1">Email address</label>
@@ -22,7 +22,7 @@ const SignUpForm = props => {
                         </div>
                         <div className="form-group">
                             <label for="InputPassword">Password</label>
-                            <input type="text" className="form-control" id="password" placeholder="Password" />
+                            <input type="text" className="form-control" id="InputPassword" placeholder="Password" />
                         </div>
                         <div className="form-group">
                             <label for="InputZip">Zipcode</label>
@@ -62,7 +62,7 @@ const SignUpForm = props => {
 
                         <button className="btn btn-primary" onClick={props.HandleLoginSubmit}>Submit</button>
                     </form>
-                    <h5 className='mt-3 acctQuestion'>Already have an account? <a href='../SingUp'>Sign In!</a></h5>
+                    <h5 className='mt-3 acctQuestion'>Already have an account? <a href='/LogIn'>Sign In!</a></h5>
                 </div>
             </div>
         </>

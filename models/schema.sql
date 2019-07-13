@@ -1,2 +1,6 @@
 -- DROP DATABASE IF EXISTS mydb;
+<<<<<<< HEAD
 CREATE DATABASE mydb;
+=======
+CREATE DATABASE barbershop;
+>>>>>>> 61b425928422329f70f92278babed26736dbf706

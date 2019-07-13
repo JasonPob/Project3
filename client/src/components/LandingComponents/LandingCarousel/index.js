@@ -9,7 +9,7 @@ const LandingCarousel = props => {
         <div id="carouselExampleFade" className="carousel slide carousel-fade"  data-ride="carousel">
             <div className="carousel-inner">
                 
-                <div className="carousel-item active">
+                <div className="carousel-item ">
                     <img className="d-block w-100" src='/images/City-03.jpg' alt="Second slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5 id='carTitle'>Door to Door Service</h5>
@@ -23,7 +23,11 @@ const LandingCarousel = props => {
                         <p id='carSubText'>Get you hair cut on your timeframe. No more waiting and no more  double booking. </p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div className="carousel-item ">
+=======
+                <div className="carousel-item active">
+>>>>>>> 61b425928422329f70f92278babed26736dbf706
                     <img className="d-block w-100" src='/images/Barber-09.jpg' src1={props.SliderImage3} alt="Third slide" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5 id='carTitle' className='mb-3'>Sharpen Your Skills</h5>
