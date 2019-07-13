@@ -7,7 +7,7 @@ const BookingModalWrapper = props => {
     // console.log('bmw', props);
     return (
         <div className={showHideClassName}>
-            <section className="modal-main">
+            <section className="modal-main generic-body-font">
                 <div className='d-flex justify-content-end'>
                     <button onClick={props.handleModalClose}>X</button>
                 </div>

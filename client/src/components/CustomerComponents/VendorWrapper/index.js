@@ -35,7 +35,7 @@ class VendorWrapper extends React.Component {
         if (this.props.displayVendors === true) {
             return (
                 <>
-                    <div className='vendor-wrapper container d-flex flex-wrap'>
+                    <div className='vendor-wrapper container d-flex flex-wrap generic-body-font'>
                         <FilterWrapper 
                                 apptDay={this.props.apptDay}
                                 handleFilterChange={this.props.handleFilterChange}

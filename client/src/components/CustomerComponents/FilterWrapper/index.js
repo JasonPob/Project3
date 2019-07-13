@@ -9,6 +9,16 @@ const FilterWrapper = props => {
             <hr />
             {/* Name is used in the onChange function. Needs to contain IsChecked, since that's what it's called in state. */}
             <form>
+            <div className='d-flex justify-content-start'>
+                    <label>
+                        <input type='radio'
+                            value='all'
+                            checked={props.apptDay === 'all'}
+                            onChange={props.handleFilterChange}
+                            className='m-2' />
+                        All Availabilities
+                    </label>
+                </div>
                 <div className='d-flex justify-content-start'>
                     <label>
                         <input type='radio'
