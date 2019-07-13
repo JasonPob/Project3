@@ -12,7 +12,15 @@ class VendorList extends React.Component {
         this.props.loadBarbers();
     }
 
+    
     render() {
+        // const barbers = this.props.barbers.map(barber => {
+        //     <VendorCard 
+        //         name={barber.name}
+        //         price={barber.price}
+        //         message={barber.message}
+        //     />
+        // })
         return (
             <>
                 <div className='vendor-list col-md-9 col-12'>
