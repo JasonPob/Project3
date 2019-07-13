@@ -11,6 +11,7 @@ import NoMatch from './pages/NoMatch';
 import Nav from './components/Nav'
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
+import About from './pages/About';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/customer" component={CustomerView} />
           <Route exact path="/vendor" component={VendorView} />
           <Route exact path="/login" component={LogIn} />
