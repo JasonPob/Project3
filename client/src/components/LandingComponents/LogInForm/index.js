@@ -23,11 +23,7 @@ const LogInForm = props => {
 
                         <button className="btn btn-primary" onClick={props.HandleLoginSubmit}>Submit</button>
                     </form>
-<<<<<<< HEAD
-                    <h5 className='mt-3 acctQuestion'>Don't have an account? <a href='../pages/SingUp'>Sign up!</a></h5>
-=======
                     <h5 className='mt-3 acctQuestion'>Don't have an account? <a href='/SignUp'>Sign up!</a></h5>
->>>>>>> 61b425928422329f70f92278babed26736dbf706
                 </div>
             </div>
         </>

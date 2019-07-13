@@ -4,7 +4,7 @@ import LandHeroWrapper from '../../components/LandingComponents/LandHeroWrapper'
 const Landing = () => 
 <>
         {/* <h1>Landing Page</h1> */}
-        <SubNavBar />
+        {/* <SubNavBar /> */}
         <LandHeroWrapper />
                           
     </>

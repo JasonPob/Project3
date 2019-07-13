@@ -10,11 +10,7 @@ class AvailabilitiesForm extends React.Component {
         }
     }
 
-<<<<<<< HEAD
-    handleSubmit = () => {
-=======
     handleBookAppt = () => {
->>>>>>> 61b425928422329f70f92278babed26736dbf706
         alert('SUBMITTED!');
     }
 
@@ -22,21 +18,13 @@ class AvailabilitiesForm extends React.Component {
         this.setState({ timeSlot: event.target.value })
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 61b425928422329f70f92278babed26736dbf706
     render(props) {
         console.log(this.state.timeSlot)
         // I guess this will contain the available times logic when we know what the data will look like...
         let availableTimes = [];
 
         return (
-<<<<<<< HEAD
-            <form onSubmit={this.handleSubmit}>
-=======
             <form onSubmit={this.handleBookAppt}>
->>>>>>> 61b425928422329f70f92278babed26736dbf706
                 <div className='availabilities-wrapper p-3'>
                     <h3>Availabilities:</h3>
                     <hr />

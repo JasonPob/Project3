@@ -1,16 +1,6 @@
 require("dotenv").config();
-<<<<<<< HEAD
-const express = require("express");
-var session = require("express-session");
-var bodyParser = require("body-parser");
-
-var passport = require("./config/passport");
-
-
-=======
 
 const express = require("express");
->>>>>>> 61b425928422329f70f92278babed26736dbf706
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,15 +18,6 @@ app.use(express.static("public"));
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-<<<<<<< HEAD
-app.use(express.static("public"));
-
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
-=======
-
->>>>>>> 61b425928422329f70f92278babed26736dbf706
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
