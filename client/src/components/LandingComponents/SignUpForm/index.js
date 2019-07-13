@@ -1,20 +1,37 @@
 import React from 'react';
 import './style.css'
+import API from '../../utils/API';
 
 class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isVendor: false
+            isVendor: false,
+            email: "",
+            name: "",
+            password:"",
+            zipcode: ""
+
         }
     }
 
-    handleSubmit = () => {
-        alert('SUBMITTED!');
+    handleSubmit = (event) => {
+        event.preventDefault();
+        API.signup(this.state)
+         
+        console.log(this.state)
     }
-    handleInputChange = ({
-        // const HiddenCheckbox = styled.input.attrs({ display: 'checkbox' });
-    })
+   
+    handleInputChange = event => {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+    
+        this.setState({
+          [name]: value
+        });
+
+      };
 
     render(props) {
         console.log(this.state.isVendor)
@@ -27,20 +44,45 @@ class SignUpForm extends React.Component {
 
                         <div className="form-group">
                             <label htmlFor="InputName">Name</label>
-                            <input name='name' type="name" className="form-control" id="InputName" placeholder="Jane Doe" />
+                            <input name="name" 
+                            type="text" 
+                            className="form-control" 
+                            id="InputName" 
+                            placeholder="Jane Doe" 
+                            value={this.state.name}
+                            onChange={this.handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
-                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                            <input  type="email" 
+                                    className="form-control" 
+                                    id="email" 
+                                    aria-describedby="emailHelp" 
+                                    placeholder="Email" 
+                                    name="email"
+                                    value={this.state.email}
+                                    onChange={this.handleInputChange}/>
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="InputPassword">Password</label>
-                            <input type="text" className="form-control" id="InputPassword" placeholder="Password" />
+                            <input type="text" 
+                            className="form-control" 
+                            id="InputPassword" 
+                            placeholder="Password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.handleInputChange} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="InputZip">Zipcode</label>
-                            <input type="number" className="form-control" id="InputZip" placeholder="12345" />
+                            <input type="number" 
+                            className="form-control" 
+                            id="InputZip" 
+                            placeholder="12345" 
+                            name="zipcode"
+                            value={this.state.zipcode}
+                            onChange={this.handleInputChange}/>
                         </div>
 
 
@@ -52,11 +94,10 @@ class SignUpForm extends React.Component {
                                 <input
                                     className="form-check-input"
                                     type="checkbox"
-                                    value="1"
                                     id="defaultCheck1"
-                                    type="checkbox"
                                     checked={this.state.isVendor}
-                                    onChange={this.handleInputChange} />
+                                    onChange={this.handleInputChange} 
+                                    name="isVendor"/>
                                 <label className="form-check-label" htmlFor="defaultCheck1">Yes</label>
                             </div>
                         </div>
@@ -72,9 +113,9 @@ class SignUpForm extends React.Component {
                                     <label htmlFor="InputPrice">Base Price</label>
                                     <input type="number" className="form-control" id="InputPrice" placeholder="$$$" />
                                 </div>
-                                <div class="form-group displayVendor">
+                                <div className="form-group displayVendor">
                                     <label htmlFor="FormControlTextarea1">Bio</label>
-                                    <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
+                                    <textarea className="form-control" id="FormControlTextarea1" rows="3"></textarea>
                                 </div>
                             </>
                         }
