@@ -15,8 +15,8 @@ class BookApptWrapper extends React.Component {
             displayZipInput: false,
             displayVendors: false,
             displayFilters: false,
-            showBookingModal: false,
             displayZipMessage: false,
+            showBookingModal: false,
             zipErrorBorder: false,
             // Weekday checkboxes
             apptDay: ''
