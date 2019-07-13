@@ -24,8 +24,8 @@ class ZipInputWrapper extends React.Component {
             { border: '2px solid #f00' } : null;
 
         return (
-            <div className='zip-input-wrapper'>
-                <h3 className='flex-row'>Where do you want to schedule your appointment?</h3>
+            <div className='zip-input-wrapper generic-body-font'>
+                <h3 className='flex-row '>Where do you want to schedule your appointment?</h3>
                 <form onSubmit={this.handleSubmitZip}>
                     <div className='flex-row'>
                         <input

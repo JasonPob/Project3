@@ -9,6 +9,10 @@ light: #dedbd0
 
 */
 
+.generic-body-font {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .Hero-wrapper {
     background-color: #3696a2;
     padding-left: 10vh;
