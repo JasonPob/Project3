@@ -20,6 +20,10 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
+      Barber.hasMany(Appointment);
+      Barber.hasMany(ServiceZIP);
+      Barber.hasMany(BarberServices);
+      Barber.hasMany(Appointment);
 
     return Barber;
  };
