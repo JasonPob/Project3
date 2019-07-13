@@ -11,7 +11,7 @@ function Nav() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav mr-auto">
 
           <li className="nav-item brandPageNames">
             <a className="nav-link" href="/Vendor">Vendor <span className="sr-only">(current)</span></a>
@@ -19,8 +19,9 @@ function Nav() {
           <li className="nav-item brandPageNames">
             <a className="nav-link" href="/Customer">Customer <span className="sr-only">(current)</span></a>
           </li>
-
-          <li className="nav-item ">
+        </ul>
+        <ul className="navbar-nav">
+        <li className="nav-item ">
             <a className="nav-link textColor text-primary" href="/LogIn">
               Log In <span className="sr-only">(current)</span>
             </a>

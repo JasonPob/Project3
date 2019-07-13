@@ -1,12 +1,14 @@
 import React from 'react';
 import './style.css';
 import LandingCarousel from '../LandingCarousel';
+import LandingAbout from '../LandingAbout';
 
 class LandHeroWrapper extends React.Component {
     render() {
         return (
             <>
                 <LandingCarousel />
+                <LandingAbout />
 
                 <div className='Hero-wrapper mt-2'>
                     <h4 className='Hero-header-text text-white'>Are you a Barber?</h4>
