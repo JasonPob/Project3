@@ -13,12 +13,12 @@ const LogInForm = props => {
                     <form className='InnerForm'>
                         <div className="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                            <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" />
                         </div>
 
                         <div className="form-group">
                             <label for="InputPassword">Password</label>
-                            <input type="text" className="form-control" id="InputPassword" placeholder="Password" />
+                            <input type="text" className="form-control" id="password" placeholder="Password" />
                         </div>
 
                         <button className="btn btn-primary" onClick={props.HandleLoginSubmit}>Submit</button>
