@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
-Client.hasMany(Appointment);
+// Client.hasMany(Appointment);
 
     return Client;
  };
