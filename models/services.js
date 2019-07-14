@@ -6,6 +6,9 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
       }
     });
+
+    Services.belongsTo(BarberServices);
+    
     return Services;
  };
 

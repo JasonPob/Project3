@@ -11,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
+    ServiceZIP.belongsTo(Barber);
 
     return ServiceZIP;
  };

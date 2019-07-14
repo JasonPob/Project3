@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     });
-
+Availability.hasMany(Barber);
 
     return Availability;
 };

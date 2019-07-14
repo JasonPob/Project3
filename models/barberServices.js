@@ -15,6 +15,9 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
+BarberServices.belongsTo(Services);
+BarberServices.belongsTo(Barber);
+BarberServices.hasMany(Services);
 
     return BarberServices;
  };
