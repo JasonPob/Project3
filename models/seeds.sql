@@ -1,22 +1,16 @@
 USE `barbershop` ;
  
-
-INSERT INTO user (email, firstName, lastName, password, zipcode, isVendor) 
-
-
-
-INSERT INTO barber (userName, firstName, lastName, bPassword) 
-VALUES ('garyWestbury', 'Gary', 'Westbury','password');
-INSERT INTO barber (userName, firstName, lastName, bPassword ) 
-VALUES ('dannyWestbury', 'Danny', 'Westbury', 'password');
+INSERT INTO barber (userName, firstName, lastName) 
+VALUES ('garyWestbury', 'Gary', 'Westbury');
+INSERT INTO users (userName, firstName, lastName) 
+VALUES ('dannyWestbury', 'Danny', 'Westbury');
  SELECT * FROM barber;
  
-INSERT INTO clients (userName, firstName, lastName, cPassword) 
-VALUES ('johnPob', 'John', 'Poblador', 'password');
-INSERT INTO clients (userName, firstName, lastName, cPassword) 
-VALUES ('jonasPob', 'Jonas', 'Poblador','password');
-SELECT * FROM clients;
-
+INSERT INTO client (userName, firstName, lastName) 
+VALUES ('johnPob', 'John', 'Poblador');
+INSERT INTO users (userName, firstName, lastName, userTypeID) 
+VALUES ('jonasPob', 'Jonas', 'Poblador');
+SELECT * FROM users;
 
 SELECT * FROM barber;
 SELECT * FROM `barbershop`.`client`;

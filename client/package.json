@@ -4,7 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.19.0",
+=======
+    "passport": "^0.4.0",
+>>>>>>> bb3cc5fb44fb5b8c3ec772c486e6594d6ff5b0a0
     "react": "^16.8.6",
     "react-calendar": "^2.19.0",
     "react-dom": "^16.8.6",

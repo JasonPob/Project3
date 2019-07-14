@@ -13,6 +13,12 @@ const PORT = process.env.PORT || 3001;
 // Requiring our models for syncing
 var db = require("./models");
 
+var app = express();
+
+app.use(bodyParser.urlencoded({ extended: false })); //For body parser
+app.use(bodyParser.json());
+app.use(express.static("public"));
+
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: false })); //For body parser
 app.use(bodyParser.json());
@@ -26,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-require("./routes/api-routes.js")(app);
+require("./routes/index.js")(app);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

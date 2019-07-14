@@ -18,7 +18,6 @@ class AvailabilitiesForm extends React.Component {
         this.setState({ timeSlot: event.target.value })
     }
 
-
     render(props) {
         console.log(this.state.timeSlot)
         // I guess this will contain the available times logic when we know what the data will look like...
