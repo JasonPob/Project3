@@ -12,13 +12,16 @@ function Nav() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav mr-auto">
-
+<li className="nav-item brandPageNames">
+            <a className="nav-link" href="/About">About <span className="sr-only">(current)</span></a>
+          </li>
           <li className="nav-item brandPageNames">
             <a className="nav-link" href="/Vendor">Vendor <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item brandPageNames">
             <a className="nav-link" href="/Customer">Customer <span className="sr-only">(current)</span></a>
           </li>
+          
         </ul>
         <ul className="navbar-nav">
         <li className="nav-item ">
@@ -35,6 +38,8 @@ function Nav() {
         </ul>
       </div>
     </nav>
+
+    
 
     //   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     //   <a className="navbar-brand brandLogo" href="/">

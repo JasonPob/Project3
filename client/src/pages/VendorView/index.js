@@ -1,16 +1,17 @@
 import React from 'react';
-import VendorCard from '../../components/CustomerComponents/VendorCard'
-import VendorAppointmentList from '../../components/VendorComponents/VendorAppointmentList'
-import VendorCalendar from '../../components/VendorComponents/VendorCalendar'
+import VendorCard from '../../components/CustomerComponents/VendorCard';
+import VendorAppointmentList from '../../components/VendorComponents/VendorAppointmentList';
+import VendorCalendar from '../../components/VendorComponents/VendorCalendar';
+import VendorAvailabilityWrapper from '../../components/VendorComponents/VendorAvailabilityWrapper';
 
 
 const VendorView = () =>
     
             <>
-        <h1>Vendor View</h1>
-        <VendorCalendar />
-        <VendorCard />
-        <VendorAppointmentList />
+        <VendorAvailabilityWrapper />
+        {/* <VendorCalendar /> */}
+        {/* <VendorCard /> */}
+        {/* <VendorAppointmentList /> */}
     </>
         
     

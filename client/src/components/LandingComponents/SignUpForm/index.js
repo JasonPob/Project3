@@ -97,6 +97,8 @@ class SignUpForm extends React.Component {
                             value={this.state.zipcode}
                             onChange={this.handleInputChange}/>
                         </div>
+                    </div>
+                    {/* Vendor Question Section <-- */}
 
 
                         {/* Vendor Question Section --> */}
@@ -134,12 +136,26 @@ class SignUpForm extends React.Component {
                         }
 
                         <button className="btn btn-primary">Submit</button>
+                    {this.state.isVendor &&
+                        <>
+                            <div className="form-group displayVendor">
+                                <label htmlFor="InputPrice">Base Price</label>
+                                <input type="number" className="form-control" id="InputPrice" placeholder="$$$" />
+                            </div>
+                            <div className="form-group displayVendor">
+                                <label htmlFor="FormControlTextarea1">Bio</label>
+                                <textarea className="form-control" id="FormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </>
+                    }
 
-                    </div>
+                    <button className="btn btn-primary">Submit</button>
+
                 </div>
-            </form>
-        )
-    }
+            </div>
+        </form>
+    )
+}
 }
 export default SignUpForm;
 

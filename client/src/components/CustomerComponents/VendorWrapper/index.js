@@ -43,6 +43,7 @@ class VendorWrapper extends React.Component {
                         <VendorList
                             HandleModalOpen={this.props.HandleModalOpen}
                             loadBarbers={this.loadBarbers}
+                            barbers={this.state.barbers}
                         />
                     </div>
                     <div>

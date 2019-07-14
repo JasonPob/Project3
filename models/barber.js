@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Client = sequelize.define("Client", {
+    var Barber = sequelize.define("Barber", {
      
       userName: {
           type: DataTypes.STRING, 
@@ -14,13 +14,18 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.STRING,
           allowNull: false
       },
-      password: {
+      bPassword: {
           type: DataTypes.STRING,
           allowNull: false
       }
     });
 
-Client.hasMany(Appointment);
+      Barber.hasMany(Appointment);
+      Barber.hasMany(ServiceZIP);
+      Barber.hasMany(BarberServices);
+      Barber.hasMany(Appointment);
 
-    return Client;
+    return Barber;
  };
+
+        
