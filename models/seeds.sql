@@ -1,18 +1,23 @@
 USE `barbershop` ;
- 
 
-INSERT INTO barber (userName, firstName, lastName, bPassword) 
+-- INSERT INTO barber (userName, firstName, lastName, bPassword, createdAt, updatedAt) 
+-- VALUES ('garyWestbury', 'Gary', 'Westbury','password','2019-03-12 13:00','2019-03-12 13:00');
+INSERT INTO Barber (userName, firstName, lastName, bPassword) 
 VALUES ('garyWestbury', 'Gary', 'Westbury','password');
+SELECT * FROM Barber;
+
+-- INSERT INTO barber (userName, firstName, lastName, bPassword,createdAt, updatedAt ) 
+-- VALUES ('dannyWestbury', 'Danny', 'Westbury', 'password','2019-03-12 13:00','2019-03-12 13:00');
+
 INSERT INTO barber (userName, firstName, lastName, bPassword ) 
 VALUES ('dannyWestbury', 'Danny', 'Westbury', 'password');
- SELECT * FROM barber;
+SELECT * FROM barber;
  
 INSERT INTO clients (userName, firstName, lastName, cPassword) 
 VALUES ('johnPob', 'John', 'Poblador', 'password');
 INSERT INTO clients (userName, firstName, lastName, cPassword) 
 VALUES ('jonasPob', 'Jonas', 'Poblador','password');
 SELECT * FROM clients;
-
 
 SELECT * FROM barber;
 SELECT * FROM `barbershop`.`client`;
@@ -37,13 +42,13 @@ INSERT INTO barberServices (ServiceID, barberID, price) VALUES (2,4, 22.00);
 INSERT INTO barberServices (ServiceID, barberID, price) VALUES (2,1, 15.00);
 SELECT * FROM barberServices;
  
-INSERT INTO serviceZIP (userID, ZIP) VALUES (1, '11577');
-INSERT INTO serviceZIP (userID, ZIP) VALUES (1, '11578');
-INSERT INTO serviceZIP (userID, ZIP) VALUES (1, '11579');
-INSERT INTO serviceZIP (userID, ZIP) VALUES (2, '11577');
-INSERT INTO serviceZIP (userID, ZIP) VALUES (2, '11579');
-INSERT INTO serviceZIP (userID, ZIP) VALUES (2, '11580');
-INSERT INTO serviceZIP (userID, ZIP) VALUES (2, '11581');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (1, '11577');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (1, '11578');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (1, '11579');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (2, '11577');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (2, '11579');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (2, '11580');
+INSERT INTO serviceZIP (barberID, ZIP) VALUES (2, '11581');
 SELECT * FROM serviceZIP;
  
 INSERT INTO availability (barberID, startHour, endHour, dayOfWeek) VALUES (1, 9, 6, 1);
@@ -129,25 +134,25 @@ WHERE   b.barberID = bs.barberID AND bs.ServiceID = s.serviceID AND b.barberID =
 ORDER BY b.userName;
 
 -- Barber ZIP --
-SELECT b.userName, b.firstName, b.lastName, sz.ZIP
-FROM  barber b, serviceZIP sz
-WHERE  b.barberID = sz.userID
-ORDER BY b.userName;
+-- SELECT b.userName, b.firstName, b.lastName, sz.ZIP
+-- FROM  barber b, serviceZIP sz
+-- WHERE  b.barberID = sz.userID
+-- ORDER BY b.userName;
 
 -- Barber Availabilty --
-SELECT b.userName, b.firstName, b.lastName,  
-                CASE dayOfWeek
-                   when  1 then 'Sunday'
-                   when  2 then 'Monday'
-                   when  3 then 'Tuesday'
-                   when  4 then 'Wednesday'
-                   when  5 then 'Thursday'
-                   when  6 then 'Friday'
-                   when  7 then 'Saturday'
-                END as DayOfWeek, a.startHour, a.endHour
-FROM barber b, availability a
-WHERE b.barberID = a.barberID
-ORDER BY b.userName;
+-- SELECT b.userName, b.firstName, b.lastName,  
+                -- CASE dayOfWeek
+                  -- when  1 then 'Sunday'
+                 --  when  2 then 'Monday'
+                  -- when  3 then 'Tuesday'
+                   -- when  4 then 'Wednesday'
+                 --  when  5 then 'Thursday'
+                 --  when  6 then 'Friday'
+                 --  when  7 then 'Saturday'
+             --   END as DayOfWeek, a.startHour, a.endHour
+-- FROM barber b, availability a
+-- WHERE b.barberID = a.barberID
+-- ORDER BY b.userName;
 
 
 

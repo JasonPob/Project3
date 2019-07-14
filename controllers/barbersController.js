@@ -2,8 +2,8 @@ const db = require("../models");
 
 module.exports = {
     findAllBarbers: function(req, res) {
-      db.barber
-        .findAll({})
+      db.Barber
+        .findAll(req.query)
         .then(dbBarber => res.json(dbBarber))
         .catch(err => res.status(422).json(err));
     },
