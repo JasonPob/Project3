@@ -8,7 +8,8 @@ class SignUpForm extends React.Component {
         this.state = {
             isVendor: false,
             email: "",
-            name: "",
+            firstName: "",
+            lastName:"",
             password:"",
             zipcode: ""
 
@@ -43,15 +44,27 @@ class SignUpForm extends React.Component {
                     <div className='InnerForm'>
 
                         <div className="form-group">
-                            <label htmlFor="InputName">Name</label>
-                            <input name="name" 
+                            <label htmlFor="InputName">Firstname</label>
+                            <input name="firstName" 
                             type="text" 
                             className="form-control" 
-                            id="InputName" 
-                            placeholder="Jane Doe" 
-                            value={this.state.name}
+                            id="firstName" 
+                            placeholder="Jane" 
+                            value={this.state.firstName}
                             onChange={this.handleInputChange}/>
                         </div>
+                        <div className="form-group">
+                            <label htmlFor="InputName">Lastname</label>
+                            <input name="lastName" 
+                            type="text" 
+                            className="form-control" 
+                            id="lastName" 
+                            placeholder="Doe" 
+                            value={this.state.lastName}
+                            onChange={this.handleInputChange}/>
+                        </div>
+
+
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <input  type="email" 

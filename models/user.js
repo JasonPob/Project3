@@ -4,7 +4,7 @@ var bcrypt = require("bcrypt-nodejs");
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
      
-      userName: {
+      email: {
           type: DataTypes.STRING, 
         allowNull: false,
         unique: true
@@ -24,7 +24,16 @@ module.exports = function(sequelize, DataTypes) {
       type:{
           type: DataTypes.STRING,
           allowNull: false
+      },
+      isVendor :{
+          type: DataTypes.BOOLEAN,
+      },
+      zipcode :{
+          type: DataTypes.INTEGER,
+          allowNull: false
       }
+
+      
     });
 
     User.prototype.validPassword = function(password) {

@@ -1,6 +1,10 @@
 USE `barbershop` ;
  
 
+INSERT INTO user (email, firstName, lastName, password, zipcode, isVendor) 
+
+
+
 INSERT INTO barber (userName, firstName, lastName, bPassword) 
 VALUES ('garyWestbury', 'Gary', 'Westbury','password');
 INSERT INTO barber (userName, firstName, lastName, bPassword ) 
