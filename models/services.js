@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
-    Services.belongsTo(BarberServices);
+    // Services.belongsTo(BarberServices);
     
     return Services;
  };

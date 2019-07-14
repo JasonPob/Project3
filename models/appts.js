@@ -39,8 +39,8 @@ module.exports = function (sequelize, DataTypes) {
 
     });
 
-    Appointment.belongsTo(Client);
-    Appointment.belongsTo(Barber);
+    // Appointment.belongsTo(Client);
+    // Appointment.belongsTo(Barber);
 
     return Appointment;
 };

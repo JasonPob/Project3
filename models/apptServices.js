@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
 
-ApptServices.hasOne(BarberServices);
+// ApptServices.hasOne(BarberServices);
 
     return ApptServices;
  };
