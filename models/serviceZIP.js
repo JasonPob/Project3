@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var ServiceZIP = sequelize.define("ServiceZIP", {
      
-      userID: {
+      barberID: {
           type: DataTypes.INTEGER, 
         allowNull: false,
       },
